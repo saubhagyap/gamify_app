@@ -19,17 +19,13 @@ class Game {
 List<Game> games = [
   Game(
     "Horizon Zero Dawn",
-    GameImage(
-        "https://www.wallpaperflare.com/static/734/272/885/horizon-zero-dawn-playstation-4-logo-aloy-horizon-zero-dawn-wallpaper.jpg",
-        ""),
+    GameImage("https://images7.alphacoders.com/718/thumb-1920-718521.jpg", ""),
     "",
     "Guerrilla Games",
   ),
   Game(
     "Metro Exodus",
-    GameImage(
-        "https://assets1.ignimgs.com/2018/12/14/metro-exodus---button-1544750418985.jpg",
-        ""),
+    GameImage("https://images3.alphacoders.com/991/991929.jpg", ""),
     "",
     "4A Games",
   ),
@@ -42,10 +38,8 @@ List<Game> games = [
     "Massive Entertainment",
   ),
   Game(
-    "Resident Evil 2",
-    GameImage(
-        "https://media.playstation.com/is/image/SCEA/resident-evil-2-box-art-01-ps4-us-12dec18?\$native_nt\$",
-        ""),
+    "Resident Evil 4",
+    GameImage("https://wallpaperaccess.com/full/1853821.jpg", ""),
     "",
     "Capcom",
   ),
@@ -62,15 +56,13 @@ List<Game> games2 = [
   ),
   Game(
     "The Last of Us Part II",
-    GameImage("https://mvpo.us/img/P6253.jpg", ""),
+    GameImage("https://wallpapercave.com/wp/wp5801995.jpg", ""),
     "",
     "Naughty Dog",
   ),
   Game(
     "Sekiro: Shadows Die Twice",
-    GameImage(
-        "https://onlysp.escapistmagazine.com/wp-content/uploads/2019/03/Sekiro-Shadows-Die-Twice-logo-art.jpg",
-        ""),
+    GameImage("https://images5.alphacoders.com/100/thumb-1920-1004016.jpg", ""),
     "",
     "From Software",
   ),
@@ -86,31 +78,26 @@ List<Game> games2 = [
 
 List<Game> featuredGames = [
   Game(
-    "Total War: Three Kingdoms",
-    GameImage(
-        "https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2019/03/08145252/2.jpg",
-        ""),
+    "Black Myth: Wukong",
+    GameImage("https://wallpapercave.com/wp/wp7954352.jpg", ""),
     "",
     "Feral Interactive",
   ),
   Game(
-    "Call of Duty: Modern Warfare",
-    GameImage(
-        "https://images.hdqwalls.com/download/call-of-duty-modern-warfare-2019-4k-cb-1920x1080.jpg",
-        ""),
+    "Ghost of Tsushima",
+    GameImage("https://wallpapercave.com/wp/wp6364471.jpg", ""),
     "",
     "Infinity Ward",
   ),
   Game(
-    "Dragon Ball Z: Kakarot",
-    GameImage("https://wallpapercave.com/wp/wp5117253.png", ""),
+    "Elden Ring",
+    GameImage("https://images3.alphacoders.com/121/thumb-1920-1214925.jpg", ""),
     "",
     "CyberConnect2",
   ),
   Game(
-    "Mortal Kombat 11",
-    GameImage(
-        "https://static.trueachievements.com/customimages/093902.jpg", ""),
+    "forza horizon 5",
+    GameImage("https://wallpapercave.com/wp/wp12405298.jpg", ""),
     "",
     "NetherRealm Studios",
   )

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data.dart';
+import '../widgets/scrollable_games_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,9 +51,9 @@ class _HomePageState extends State<HomePage> {
       child: PageView.builder(
         controller: PageController(
             viewportFraction: 1.0), // Ensures full width without extra space
-        onPageChanged: (_index) {
+        onPageChanged: (index) {
           setState(() {
-            _selectedGame = _index;
+            _selectedGame = index;
           });
         },
         itemCount: featuredGames.length,
@@ -114,6 +115,10 @@ class _HomePageState extends State<HomePage> {
             height: height * 0.13,
           ),
           _featuredGamesInfoWidget(height, width),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: height * 0.02),
+            child: ScrollableGamesWidget(height * 0.24, width, true, games),
+          ),
         ],
       ),
     );
@@ -168,7 +173,7 @@ class _HomePageState extends State<HomePage> {
             maxLines: 2,
             style: TextStyle(
               color: Colors.white,
-              fontSize: height * 0.040,
+              fontSize: height * 0.035,
             ),
           ),
           SizedBox(
@@ -178,16 +183,15 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
-            children: featuredGames.map((_game) {
-              bool _isActive =
-                  _game.title == featuredGames[_selectedGame].title;
-              double _circleRadius = height * 0.004;
+            children: featuredGames.map((game) {
+              bool isActive = game.title == featuredGames[_selectedGame].title;
+              double circleRadius = height * 0.004;
               return Container(
                 margin: EdgeInsets.only(right: width * 0.015),
-                height: _circleRadius * 2,
-                width: _circleRadius * 2,
+                height: circleRadius * 2,
+                width: circleRadius * 2,
                 decoration: BoxDecoration(
-                    color: _isActive ? Colors.green : Colors.grey,
+                    color: isActive ? Colors.green : Colors.grey,
                     borderRadius: BorderRadius.circular(100)),
               );
             }).toList(),
