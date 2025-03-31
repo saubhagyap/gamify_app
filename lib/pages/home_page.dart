@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _featuredGameWidget(double height, double width) {
     return SizedBox(
-      height: height * 0.50,
+      height: height * 0.45,
       width: width,
       child: PageView.builder(
         controller: PageController(
@@ -116,9 +116,11 @@ class _HomePageState extends State<HomePage> {
           ),
           _featuredGamesInfoWidget(height, width),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: height * 0.02),
+            padding: EdgeInsets.symmetric(vertical: height * 0.0005),
             child: ScrollableGamesWidget(height * 0.24, width, true, games),
           ),
+          _featuredGameBannerWidget(height, width),
+          ScrollableGamesWidget(height * 0.22, width, false, games2)
         ],
       ),
     );
@@ -161,7 +163,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _featuredGamesInfoWidget(double height, double width) {
     return SizedBox(
-      height: height * 0.12,
+      height: height * 0.10,
       width: width,
       child: Column(
         mainAxisSize: MainAxisSize.max,
@@ -197,6 +199,20 @@ class _HomePageState extends State<HomePage> {
             }).toList(),
           )
         ],
+      ),
+    );
+  }
+
+  Widget _featuredGameBannerWidget(double height, double width) {
+    return Container(
+      height: height * 0.13,
+      width: width,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: NetworkImage(featuredGames[3].coverImage.url),
+        ),
       ),
     );
   }

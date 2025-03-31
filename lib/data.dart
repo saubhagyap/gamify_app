@@ -69,8 +69,7 @@ List<Game> games2 = [
   Game(
     "Just Cause 4",
     GameImage(
-        "https://s3.gaming-cdn.com/images/products/2666/orig/just-cause-4-cover.jpg",
-        ""),
+        "https://avatarfiles.alphacoders.com/164/thumb-1920-164977.jpg", ""),
     "",
     "Avalanche Studios",
   ),

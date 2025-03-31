@@ -15,7 +15,7 @@ class ScrollableGamesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: _height * 1.2,
+      height: _height * 1.05,
       width: _width,
       child: ListView(
         physics: BouncingScrollPhysics(),
@@ -40,11 +40,13 @@ class ScrollableGamesWidget extends StatelessWidget {
                         image: NetworkImage(_game.coverImage.url),
                       )),
                 ),
-                Text(_game.title,
-                    style: TextStyle(
-                      fontSize: _height * 0.06,
-                      color: Colors.white,
-                    )),
+                Text(
+                  _game.title,
+                  style: TextStyle(
+                    fontSize: _height * 0.06,
+                    color: Colors.white,
+                  ),
+                )
               ],
             ),
           );
